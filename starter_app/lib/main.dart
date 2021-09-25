@@ -13,7 +13,7 @@ class StarterApp extends StatelessWidget {
       home: Material(
         child: Center(
           child: Container(
-            child: Text("hello flutter"),
+            child: Text("hello flutter at day 1"),
           ),
         ),
       ),
