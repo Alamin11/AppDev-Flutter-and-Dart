@@ -60,7 +60,6 @@ android {
     }
 
         ndkVersion '23.0.7599858'
-    buildToolsVersion '29.0.2'
 }
 
 flutter {
