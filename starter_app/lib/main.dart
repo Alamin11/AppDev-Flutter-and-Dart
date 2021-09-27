@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:starter_app/pages/home_page.dart';
+import 'package:starter_app/pages/log_in.dart';
 
 void main() {
-  runApp(StarterApp());
+  runApp(const StarterApp());
 }
 
 class StarterApp extends StatelessWidget {
-  //const StarterApp({Key? key}) : super(key: key);
+  const StarterApp({Key? key}) : super(key: key);
 
   //Variables in dart
   // int age = 28; //integer type number
@@ -17,7 +18,23 @@ class StarterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      // home: HomePage(),
+      // themeMode: ThemeMode.dark, //Dark theme
+      // darkTheme: ThemeData(
+      //   //brightness: Brightness.dark, //describes the color of a theme
+      //   primarySwatch: Colors
+      //       .red, //if the brightness is set to dark , primary swatch won't work
+      // ),
+
+      themeMode: ThemeMode.light, //light theme
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
+      ),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LogInPage(), //defining which page do you want
+        "/home": (context) => HomePage(),
+      },
     );
   }
 }
