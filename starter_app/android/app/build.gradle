@@ -1,4 +1,5 @@
 def localProperties = new Properties()
+
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader ->
@@ -29,8 +30,8 @@ android {
     compileSdkVersion 30
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility kotlin_version
+        targetCompatibility kotlin_version
     }
 
     kotlinOptions {
@@ -57,6 +58,8 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+        ndkVersion '23.0.7599858'
 }
 
 flutter {
