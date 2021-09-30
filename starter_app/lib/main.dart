@@ -30,9 +30,9 @@ class StarterApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      initialRoute: "/home",
+      //initialRoute: "/home",
       routes: {
-        "/": (context) => LogInPage(), //defining which page do you want
+        "/": (context) => const LogInPage(), //defining which page do you want
         "/home": (context) => HomePage(),
       },
     );
