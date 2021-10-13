@@ -7,13 +7,13 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blueAccent,
         appBar: AppBar(
           elevation: 0,
           title: const Center(
             child: Text('Dice Game'),
           ),
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.lightBlueAccent,
         ),
         body: const DicePage(),
       ),
@@ -32,10 +32,18 @@ class _DicePageState extends State<DicePage> {
   var rightDiceNumber = 1;
   var leftDiceNumber = 1;
 
-  void changeDice() {
+  void changeRightDice() {
     setState(() {
       rightDiceNumber = Random().nextInt(6) + 1;
+      //leftDiceNumber = Random().nextInt(6) + 1;
+      print("RightDice- $rightDiceNumber");
+    });
+  }
+
+  void changeLeftDice() {
+    setState(() {
       leftDiceNumber = Random().nextInt(6) + 1;
+      print("LeftDice- $leftDiceNumber");
     });
   }
 
@@ -49,7 +57,7 @@ class _DicePageState extends State<DicePage> {
               padding: const EdgeInsets.all(16.0),
               child: TextButton(
                 onPressed: () {
-                  changeDice();
+                  changeLeftDice();
                 },
                 child: Image.asset('assets/images/dice$leftDiceNumber.png'),
               ),
@@ -60,7 +68,7 @@ class _DicePageState extends State<DicePage> {
               padding: const EdgeInsets.all(16.0),
               child: TextButton(
                 onPressed: () {
-                  changeDice();
+                  changeRightDice();
                 },
                 child: Image.asset('assets/images/dice$rightDiceNumber.png'),
               ),

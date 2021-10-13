@@ -67,7 +67,24 @@ class MyCard extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 20, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    'alamincsecu@gmail.com',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
