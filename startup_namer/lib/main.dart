@@ -63,7 +63,8 @@ class _randomWordsState extends State<randomWords> {
             _suggestions.addAll(generateWordPairs().take(10)); /*4*/
           }
           return _buildRow(_suggestions[index]);
-        });
+        }
+        );
   }
   Widget _buildRow(WordPair pair) {
     return ListTile(
