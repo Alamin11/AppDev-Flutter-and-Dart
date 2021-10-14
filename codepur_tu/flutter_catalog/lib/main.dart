@@ -10,6 +10,7 @@ class CenterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MyApp(),
     );
   }
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
     //int countNum = 0;
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blueAccent,
         title: const Text(
           'Clearing Thoughts',
@@ -61,7 +63,7 @@ class MyApp extends StatelessWidget {
                 color: Colors.blueAccent,
               ),
               child: Text(
-                'GeeksForGeeks',
+                'Drawer Navigation',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
