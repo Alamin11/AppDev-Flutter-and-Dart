@@ -53,6 +53,37 @@ class MyApp extends StatelessWidget {
           //print(countNum);
         },
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: const <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blueAccent,
+              ),
+              child: Text(
+                'GeeksForGeeks',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              title: Text(
+                'Groups',
+                style: TextStyle(
+                    //backgroundColor: Colors.green,
+                    ),
+              ),
+              leading: Icon(Icons.people),
+            ),
+            ListTile(
+              title: Text('Email'),
+              leading: Icon(Icons.email),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
